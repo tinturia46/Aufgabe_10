@@ -80,7 +80,7 @@ namespace Fusee.Tutorial.Core
 
             // Setup the camera
             //                                                  Dreh die Kamera um den Negativen Winkel ArgesTan um die Z-Achse Rotiert
-            RC.View = float4x4.CreateTranslation(0, 0, 40) * float4x4.CreateRotationX(-(float) Atan(15.0 / 40.0));
+            RC.View = float4x4.CreateTranslation(M.Sin(5 * TimeSinceStart), 0, 40) * float4x4.CreateRotationX(-(float) Atan(15.0 / 40.0));
 
             // Render the scene on the current render context
             _sceneRenderer.Render(RC);
